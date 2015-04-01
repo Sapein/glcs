@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/posh
 #
 # play.sh -- playing glc stream with mplayer
 # Copyright (C) 2007 Pyry Haulos

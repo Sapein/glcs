@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/posh
 
 usage() {
   printf "Usage: %s video_size pixel_format framerate base_output_filename\n" "$0"
 }
 
 # validate num params
-if ! (( $# == 4 )); then
+if ! [ $# -eq  4  ]; then
   usage
   exit -1
 fi

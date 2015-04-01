@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/posh
 #
 # glc-build.sh -- glc build and install script
 # Copyright (C) 2007-2008 Pyry Haulos
@@ -84,7 +84,7 @@ ask "Enter path where glc will be installed."
 ask "  (leave blank to install to root directory)"
 ask-prompt
 read DESTDIR
-[ "${DESTDIR:${#DESTDIR}-1}" == "/" ] && DESTDIR="${DESTDIR:0:${#DESTDIR}-1}"
+[ "${DESTDIR:${#DESTDIR}-1}" == "/" ] && DESTDIR="${DESTDIR:0:${#DESTDIR}}"
 if [ "${DESTDIR}" != "" ]; then
 	if [ -e "${DESTDIR}" ]; then
 		[ -f "${DESTDIR}" ] && die "Invalid install directory"

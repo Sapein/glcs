@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/posh
 #
 # encode.sh -- encoding glc stream to x264-encoded video
 # Copyright (C) 2007-2008 Pyry Haulos
@@ -97,7 +97,7 @@ while true; do
 done
 
 for arg do FILE=$arg; done
-if [ "$FILE" == "" ]; then
+if [ "$FILE" = "" ]; then
 	showhelp
 	exit 1
 fi
@@ -133,7 +133,7 @@ esac
 
 glc-play "${FILE}" -o - -a "${AUDIO}" | lame -hV2 - "${AUDIOTMP}"
 
-if [ "${MULTIPASS}" == "no" ]; then
+if [ "${MULTIPASS}" = "no" ]; then
 	glc-play "${FILE}" -o - -y "${VIDEO}" | \
 		mencoder - \
 			-audiofile "${AUDIOTMP}"\

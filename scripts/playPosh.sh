@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/posh
 #
 # play.sh -- playing glc stream with mplayer
 # Copyright (C) 2007 Pyry Haulos
@@ -10,7 +10,7 @@ AUDIO="1"
 AUDIOFIFO="/tmp/glc-audio.fifo"
 VIDEOFIFO="/tmp/glc-video.fifo"
 
-if [ "$1" == "" ]; then
+if [ "$1" = "" ]; then
 	echo "$0 FILE [ctx] [audio]"
 	exit 1
 fi
